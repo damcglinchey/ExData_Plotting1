@@ -9,9 +9,6 @@ if (!file.exists("household_power_consumption.txt")) {
 ## TODO: Read in only data within the given date window
 rawdata <- read.table("household_power_consumption.txt", header=TRUE, sep=";", na.strings="?")
 
-## Manipulate the data frame
-library(dplyr)
-
 ## Select only dates within the desired time
 timelo <- strptime("2007-02-01", format="%Y-%m-%d")
 timehi <- strptime("2007-02-02", format="%Y-%m-%d")
